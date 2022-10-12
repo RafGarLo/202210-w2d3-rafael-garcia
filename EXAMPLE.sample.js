@@ -2,7 +2,7 @@ export function sum(a, b) {
     return a + b;
 }
 
-import { sum } from './sample.js';
+import { sum } from './testing/sample.js';
 
 describe('testing add', () => {
     let a = 2;
