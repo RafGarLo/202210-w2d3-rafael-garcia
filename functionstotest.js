@@ -1,2 +1,1 @@
-export const strictEquals = (a, b) => {
-
+export const strictEquals = (a, b) => {};
