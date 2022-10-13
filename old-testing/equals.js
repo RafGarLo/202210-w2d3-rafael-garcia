@@ -11,3 +11,14 @@ export const strictEquals = (a, b) => {
     }
     return Object.is(a, b);
 };
+
+export const division = (a, b) => {
+    let error0 = 'Error: invalid parameters entered';
+    if (a === 0 || b === 0) {
+        throw error0;
+    }
+    if (isNaN(a) || isNaN(b)) {
+        throw error0;
+    }
+    return a / b;
+};

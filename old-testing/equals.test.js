@@ -1,4 +1,4 @@
-import { strictEquals } from './equals.js';
+import { strictEquals, division } from './equals.js';
 
 //gerhkin - Given - When - Then
 
@@ -125,5 +125,31 @@ describe('Give strictEquals function', () => {
         const result = strictEquals(a, b);
         //AAA Assert
         expect(result).toBe(expectedResult);
+    });
+});
+
+describe('testing division', () => {
+    test('given two numbers, the function should perform a division operation', () => {
+        let a = 8;
+        let b = 2;
+        expect(division(a, b)).toBe(4);
+    });
+    test('given two numbers, if one of them is equal to 0, function should throw error', () => {
+        let a = 8;
+        let b = 0;
+        let error0 = 'Error: invalid parameters entered';
+        expect(() => {
+            division(a, b);
+        }).toThrow(error0);
+    });
+    test('given two numbers, if one of them is NaN, function should throw error', () => {
+        let a = 8;
+        let b = NaN;
+        let error0 = 'Error: invalid parameters entered';
+        try {
+            division(a, b);
+        } catch (e) {
+            expect(e.message).toBe('Error: invalid parameters');
+        }
     });
 });

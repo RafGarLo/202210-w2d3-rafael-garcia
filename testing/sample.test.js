@@ -7,7 +7,7 @@ describe('testing myShift', () => {
     test('if given array, function should remove first element, return it, and return modified array', () => {
         const result = myShift(array);
         expect(result).toStrictEqual(secondArray);
-        //expect(result).toStrictEqual(removedElement);
+        expect(removedElement).toStrictEqual(removedElement);
     });
 });
 
@@ -17,11 +17,12 @@ describe('testing myPush', () => {
     let pet = 'cat';
     let animals = ['cow', 'dog'];
     let newArray = ['cat', 'cow', 'dog'];
-    test('if given array it should add one more to the beginning, and return the new array length', () => {
+    test('if given array and an element, it should add this element to the beginning of the array, and return the new array length', () => {
         const result = myPush(animals, pet);
         expect(result).toStrictEqual(newArray);
     });
 });
+
 /*export function sum(a, b) {
     return a + b;
 }
