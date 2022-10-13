@@ -2,13 +2,26 @@ import { myShift } from './sample.js';
 
 describe('testing myShift', () => {
     let array = [2, 3, 4, 5];
+    let removedElement = [2];
     let secondArray = [3, 4, 5];
-    test('if array has 4 elements, and 2 is element number 0, it should be', () => {
+    test('if given array, function should remove first element, return it, and return modified array', () => {
         const result = myShift(array);
-        expect(result).toBe(secondArray);
+        expect(result).toStrictEqual(secondArray);
+        //expect(result).toStrictEqual(removedElement);
     });
 });
 
+import { myPush } from './sample.js';
+
+describe('testing myPush', () => {
+    let pet = 'cat';
+    let animals = ['cow', 'dog'];
+    let newArray = ['cat', 'cow', 'dog'];
+    test('if given array it should add one more to the beginning, and return the new array length', () => {
+        const result = myPush(animals, pet);
+        expect(result).toStrictEqual(newArray);
+    });
+});
 /*export function sum(a, b) {
     return a + b;
 }

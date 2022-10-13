@@ -6,9 +6,8 @@
     "type": "module",
     "scripts": {
         "start": "node index.js",
-        "test": "jest",
+        "test": "jest --watchAll",
         "lint": "eslint",
-        "jest": "jest --watchAll",
         "prepare": "husky install"
     },
     "repository": {
