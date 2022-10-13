@@ -12,8 +12,8 @@ console.log(firstElement);
 */
 export function myShift(array) {
     const [removed, ...newArray] = array;
-    console.log(removed);
-    return newArray;
+    //console.log(removed);
+    return removed;
 }
 
 export function myPush(array, element) {

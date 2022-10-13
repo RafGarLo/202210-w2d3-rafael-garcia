@@ -6,8 +6,7 @@ describe('testing myShift', () => {
     let secondArray = [3, 4, 5];
     test('if given array, function should remove first element, return it, and return modified array', () => {
         const result = myShift(array);
-        expect(result).toStrictEqual(secondArray);
-        expect(removedElement).toStrictEqual(removedElement);
+        expect(result).toStrictEqual(removedElement);
     });
 });
 
