@@ -4,6 +4,7 @@ export function myShift(array) {
     if (!Array.isArray(array)) {
         throw newError;
     }
+
     return removed;
 }
 
@@ -15,6 +16,7 @@ export function myUnshift(array, element) {
     if (!Array.isArray(array)) {
         throw newError;
     }
+
     return newArrayLength;
 }
 

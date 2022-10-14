@@ -6,9 +6,8 @@ describe('testing myShift', () => {
     let secondArray = [3, 4, 5];
     test('if given array, function should remove first element, return it, and return modified array', () => {
         const result = myShift(array);
-
         expect(result).toBe(removedElement);
-        // expect(array).not.toContain(removedElement);
+        expect(result).not.toContain(removedElement);
     });
     test('if element entered into function is not an array, it should throw an error', () => {
         const notArray = 'pepe';
@@ -18,11 +17,11 @@ describe('testing myShift', () => {
     });
 });
 
-describe('testing myPush', () => {
+describe('testing myUnshift', () => {
     let pet = 'cat';
     let animals = ['cow', 'dog'];
     let newArray = ['cat', 'cow', 'dog'];
-    let newArraylength = 3;
+    let newArraylength = newArray.length;
     test('if given array and an element, it should add this element to the beginning of the array, and return the new array length', () => {
         const result = myUnshift(animals, pet);
         expect(result).toStrictEqual(newArraylength);
@@ -30,7 +29,7 @@ describe('testing myPush', () => {
     test('if element entered into function is not an array, it should throw an error', () => {
         const notArray2 = 'pepe';
         expect(() => {
-            myShift(notArray2);
+            myUnshift(notArray2);
         }).toThrow();
     });
 });
@@ -45,7 +44,7 @@ describe('testing myLength', () => {
     test('if element entered into function is not an array, it should throw an error', () => {
         const notArray = 'pepe';
         expect(() => {
-            myShift(notArray);
+            myLength(notArray);
         }).toThrow();
     });
 });
